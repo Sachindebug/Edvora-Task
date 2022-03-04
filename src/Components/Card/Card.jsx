@@ -14,7 +14,7 @@ export default function Card(props) {
       
       <div className={ride}>
           <img src={props.pic} alt="" />
-          <div className="data1">
+          <div>
               <ul>
                   <li>Ride Id: {props.id}</li>
                   <li>Origion Station: {props.origin}</li>

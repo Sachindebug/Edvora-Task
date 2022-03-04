@@ -8,10 +8,13 @@ export default function Rides(props) {
   const [tabNumber,setTabNumber]=useState(1);
   const rideInfo=props.rideInfo;
   const userStation=props.userStation;
-  
-  // rideInfo.map((train)=>(
-     
-  // ));
+  const past=[];
+  const upcoming=[];
+  rideInfo.map((train)=>(
+     (train.date[9]==='1')?past.push(train):upcoming.push(train)
+  ));
+    
+
 
   const handleClick1 = () =>{
     setTabNumber(1);
@@ -23,22 +26,32 @@ export default function Rides(props) {
   const handleClick3 = () =>{
     setTabNumber(3);
   }
-  console.log(tabNumber);
+  
   return (
     <>
        <div className={tabs}>
          <button className={tabNumber!==1?curr:clicked} onClick={handleClick1}>
-             Nearest Rides(21)
+             Nearest Rides
          </button>
          <button className={tabNumber!==2?curr:clicked}onClick={handleClick2}>
-             Upcoming Rides
+             Upcoming Rides({upcoming.length})
          </button>
          <button className={tabNumber!==3?curr:clicked}onClick={handleClick3}>
-             Past Rides
+             Past Rides({past.length})
          </button>
        </div>
        <div className='main'>
-          {rideInfo.map((train,index)=>(
+          {tabNumber ===1 && rideInfo.map((train,index)=>(
+              <Card key={index} city={train.city} date={train.date}
+              id={train.id} pic={train.map_url} origin={train.origin_station_code}
+              state={train.state} pathArray={train.station_path} stationCode={userStation} destination={train.destination_address_code}/>
+          ))}
+          {tabNumber ===2 && upcoming.map((train,index)=>(
+              <Card key={index} city={train.city} date={train.date}
+              id={train.id} pic={train.map_url} origin={train.origin_station_code}
+              state={train.state} pathArray={train.station_path} stationCode={userStation} destination={train.destination_address_code}/>
+          ))}
+          {tabNumber ===3 && past.map((train,index)=>(
               <Card key={index} city={train.city} date={train.date}
               id={train.id} pic={train.map_url} origin={train.origin_station_code}
               state={train.state} pathArray={train.station_path} stationCode={userStation} destination={train.destination_address_code}/>

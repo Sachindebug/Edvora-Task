@@ -56,7 +56,7 @@ function sortByNearest(ride, stCode) {
 }
 
  sortByNearest(rideInfo,userStation);
- console.log(userStation);
+
  
 
   
