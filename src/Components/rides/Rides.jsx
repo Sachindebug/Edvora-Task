@@ -28,10 +28,10 @@ export default function Rides(props) {
     <>
        <div className={tabs}>
          <button className={tabNumber!==1?curr:clicked} onClick={handleClick1}>
-             Nearest Rides
+             Nearest Rides(21)
          </button>
          <button className={tabNumber!==2?curr:clicked}onClick={handleClick2}>
-             Upcoming Rides(22)
+             Upcoming Rides
          </button>
          <button className={tabNumber!==3?curr:clicked}onClick={handleClick3}>
              Past Rides
