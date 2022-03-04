@@ -8,8 +8,7 @@ export default function Rides(props) {
   const [tabNumber,setTabNumber]=useState(1);
   const rideInfo=props.rideInfo;
   const userStation=props.userStation;
-  const Upcoming= [];
-  const past=[]
+  
   // rideInfo.map((train)=>(
      
   // ));
@@ -32,7 +31,7 @@ export default function Rides(props) {
              Nearest Rides
          </button>
          <button className={tabNumber!==2?curr:clicked}onClick={handleClick2}>
-             Upcoming Rides
+             Upcoming Rides(22)
          </button>
          <button className={tabNumber!==3?curr:clicked}onClick={handleClick3}>
              Past Rides

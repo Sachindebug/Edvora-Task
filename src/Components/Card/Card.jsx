@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Card.module.css';
 export default function Card(props) {
   const arrayPath =props.pathArray;
-  const { _map, ride, ride_d, val, badges, badge } = styles;
+  const { ride,badges, badge } = styles;
   let res=Number.MAX_SAFE_INTEGER;
   let station_code=props.stationCode;
   arrayPath.map((code)=>(
