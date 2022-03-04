@@ -1,0 +1,19 @@
+.tabs{
+    margin:30px;
+}
+.curr{
+    margin:0px 30px;
+    font-size:1.25rem;
+    background: transparent;
+    border: none;
+    color: #fff;
+}
+.clicked{
+    margin:0px 30px;
+    font-size:1.25rem;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding-bottom:2px;
+    border-bottom: 4px solid #fff;
+}

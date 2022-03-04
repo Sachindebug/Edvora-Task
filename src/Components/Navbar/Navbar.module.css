@@ -1,0 +1,44 @@
+
+.main_nav {
+    padding: 0px 40px;
+    background-color: #171717;
+}
+
+._logo {
+    max-width: 114px;
+    color: #fff;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+._logo img {
+    width: 100%;
+}
+
+
+._avatar {
+    display: flex;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-left: 1.563rem;
+}
+
+.name {
+    color:#fff;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+._avatar img {
+    width: 100%;
+}
